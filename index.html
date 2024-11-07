@@ -83,8 +83,14 @@
     }
 
     function problem3() {
-       
-        alert("Problem 3 function is not yet implemented.");
+        let numbers = [];
+        for (let i = 0; i < 5; i++) {
+            numbers.push(parseInt(prompt("Enter number " + (i + 1) + ":")));
+        }
+        let highest = Math.max(...numbers);
+        let lowest = Math.min(...numbers);
+        alert("The HIGHEST is " + highest + ". The LOWEST is " + lowest + ".");
     }
 </script>
+
 </html>
