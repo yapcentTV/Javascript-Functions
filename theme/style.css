@@ -31,7 +31,7 @@ a, i, input, img, h1, button, figure{
     align-items: center;
     justify-content: center;
     padding: 50px;
-    height: 70dvh;
+    min-height: 70dvh;
     min-width: 750px;
     width: 100%;
 }
