@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Midterm Drill</title>
+    <script>
+        function problem1() {
+            let num = parseInt(prompt("Enter a number higher than 3:"));
+            if (num <= 3) {
+                alert("Number must be higher than 3.");
+                return;
+            }
+            let fib = [1, 1];
+            for (let i = 2; i < num; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+            alert("Fibonacci sequence: " + fib.join(" "));
+        }
+
+        function problem2() {
+            let numbers = [];
+            for (let i = 0; i < 5; i++) {
+                numbers.push(parseInt(prompt("Enter number " + (i + 1) + ":")));
+            }
+            let sum = numbers.reduce((a, b) => a + b, 0);
+            let result = (sum % 2 === 0) ? "EVEN" : "ODD";
+            alert("The SUM is " + sum + ". The SUM is " + result + ".");
+        }
+
+        function problem3() {
+            // Placeholder for Problem 3
+            alert("Problem 3 function is not yet implemented.");
+        }
+    </script>
+</head>
+<body>
+    <h1>Midterm Drill</h1>
+    <button onclick="problem1()">PROBLEM 1</button>
+    <button onclick="problem2()">PROBLEM 2</button>
+    <button onclick="problem3()">PROBLEM 3</button>
+</body>
+</html>
