@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root{
+  color-scheme: light dark;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  background: light-dark(#edf2f4, #0b090a);
+  min-height: 100dvh;
+  width: 100%;
+  margin: 0 auto;
+  cursor: url(../design/cursor.png), auto!important;
+}
+
+a, i, input, img, h1, button, figure{
+  cursor: url(../design/thumb.png), auto!important;
+}
+
+
+.bg{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    height: 85dvh;
+    width: 100%;
+}
+
+.bg .container{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: light-dark(#0b090a, #edf2f4);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border-radius: 20px;
+    height: fit-content;
+    width: 600px;
+}
+
+.bg .head{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: fit-content;
+    width: 100%;
+}
+
+.bg .head h1{
+    font-size: 4rem;
+    font-weight: 700;
+    color: light-dark(#ffee32, #1985a1);
+    text-shadow: 1px 1px light-dark(#ffee32, #1985a1);
+}
+
+.bg .here{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+    background: light-dark(#ffee32, #1985a1);;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    height: fit-content;
+    width: 500px;
+}
+
+.bg .here .btn{
+    padding: 10px;
+    border: unset;
+    background: #0b090a;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: aliceblue;
+    transition: all 450ms;
+}
+
+.bg .here .btn:hover{
+   background: #edf2f4;
+   color: black;
+}
+
+.bg .here .btn:active{
+    transform: scale(.9);
+}
+
+.us{
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 15px;
+    background: light-dark(#0b090a, #edf2f4);
+    height: fit-content;
+    width: 100%;
+}
+
+.us h3{
+    color: light-dark(#edf2f4, #0b090a);
+}
