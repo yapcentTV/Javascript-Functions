@@ -1,41 +1,83 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" type="x-icon" href="design/stars.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Midterm Drill</title>
-    <script>
-        function problem1() {
-            let num = parseInt(prompt("Enter a number higher than 3:"));
-            if (num <= 3) {
-                alert("Number must be higher than 3.");
-                return;
-            }
-            let fib = [1, 1];
-            for (let i = 2; i < num; i++) {
-                fib[i] = fib[i - 1] + fib[i - 2];
-            }
-            alert("Fibonacci sequence: " + fib.join(" "));
-        }
+    <link rel="stylesheet" href="theme/style.css">
+    <link rel="stylesheet" href="https://db.onlinewebfonts.com/c/d01bb3f19c95d5c95859aa038854c3e6?family=Rukola" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carter+One&family=Fruktur:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lustria&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carter+One&family=Fruktur:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carter+One&family=Fruktur:ital@0;1&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Concert+One&family=Great+Vibes&family=Maven+Pro:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Bubbles&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Concert+One&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Bubbles&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Bubbles&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script type="text/script"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+    <script src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
+  </head>
 
-        function problem2() {
-            let numbers = [];
-            for (let i = 0; i < 5; i++) {
-                numbers.push(parseInt(prompt("Enter number " + (i + 1) + ":")));
-            }
-            let sum = numbers.reduce((a, b) => a + b, 0);
-            let result = (sum % 2 === 0) ? "EVEN" : "ODD";
-            alert("The SUM is " + sum + ". The SUM is " + result + ".");
-        }
-
-        function problem3() {
-            // Placeholder for Problem 3
-            alert("Problem 3 function is not yet implemented.");
-        }
-    </script>
-</head>
 <body>
+
+<section class="bg">
+
+<div class="container">
+  <div class="head">
     <h1>Midterm Drill</h1>
-    <button onclick="problem1()">PROBLEM 1</button>
-    <button onclick="problem2()">PROBLEM 2</button>
-    <button onclick="problem3()">PROBLEM 3</button>
+  </div>
+  <div class="here">
+    <button class="btn" onclick="problem1()">Problem #1</button>
+    <button class="btn" onclick="problem2()">Problem #2</button>
+    <button class="btn" onclick="problem3()">Problem #3</button>
+  </div>
+</div>
+
+</section>
+
+<section class="us">
+    <h3>Kiersten Redondo</h3>
+    <h3>Vincent Yap</h3>
+</section>
+
+
 </body>
+
+<script>
+    function problem1() {
+        let num = parseInt(prompt("Enter a number higher than 3:"));
+        if (num <= 3) {
+            alert("Number must be higher than 3.");
+            return;
+        }
+        let fib = [1, 1];
+        for (let i = 2; i < num; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+        alert("Fibonacci sequence: " + fib.join(" "));
+    }
+
+    function problem2() {
+        let numbers = [];
+        for (let i = 0; i < 5; i++) {
+            numbers.push(parseInt(prompt("Enter number " + (i + 1) + ":")));
+        }
+        let sum = numbers.reduce((a, b) => a + b, 0);
+        let result = (sum % 2 === 0) ? "EVEN" : "ODD";
+        alert("The SUM is " + sum + ". The SUM is " + result + ".");
+    }
+
+    function problem3() {
+       
+        alert("Problem 3 function is not yet implemented.");
+    }
+</script>
 </html>
